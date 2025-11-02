@@ -1,6 +1,6 @@
 """
-Task 3 – Function with Combined Logic
-------------------------------------
+Task 3 🟡 Function with Combined Logic
+----------------------------------------
 Write a function `analyze_sentence(text)` that returns:
 1. total character count (len)
 2. word count (split)
@@ -8,11 +8,20 @@ Write a function `analyze_sentence(text)` that returns:
 Return results as a tuple and print summary in main.
 """
 
+
 def analyze_sentence(text):
     """Return length, word count, and whether 'Python' appears in text."""
     # TODO: implement function logic
-    pass
+    length = len(text)
+    word_count = len(text.split())
+    has_python = "python" in text.lower()
+    return length, word_count, has_python
+
 
 if __name__ == "__main__":
     # TODO: read sentence from input, call function, and print results
-    pass
+    text = input("Enter a sentence: ")
+    length, word_count, has_python = analyze_sentence(text)
+    print(f"Total characters: {length}")
+    print(f"Total words: {word_count}")
+    print(f"Contains 'Python': {has_python}")
